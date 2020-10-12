@@ -1,0 +1,16 @@
+// Exercises from Lesson 1 https://classroom.udacity.com/courses/ud803/lessons/e98aae00-9563-4fca-b91c-a4e79ca79c27/concepts/e4c262e3-ff1c-451b-b455-562d76d22efb
+console.log("hiya friend!"); // test code in developer tools
+//test console printing multiple values
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}
+//manipulating page element from developer tools
+document.getElementsByTagName("h1")[0].style.color = "#ff0000";
+// add an event listener to a page
+document.body.addEventListener('click', function () {
+     var myParent = document.getElementsByTagName("h1")[0]; 
+     var myImage = document.createElement("img");
+     myImage.src = 'https://thecatapi.com/api/images/get?format=src&type=gif';
+     myParent.appendChild(myImage);
+     myImage.style.marginLeft = "160px";
+});
