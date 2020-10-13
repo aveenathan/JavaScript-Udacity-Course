@@ -1,0 +1,222 @@
+//if conditional statement in javaScript
+var number = 3;
+if (number%2!==0 ) {            
+    console.log("odd")}
+else {
+    console.log("even")}
+
+// using if else, else if
+var musicians = 4;
+if (musicians===1){
+    console.log("solo")}
+else if (musicians=== 2){
+    console.log("duet")}
+else if (musicians === 3){
+    console.log("trio")}
+else if (musicians === 4){
+    console.log("quartet")}
+else if (musicians <= 0){
+    console.log("not a group")}
+else if (musicians >4){
+    console.log("this is a large group")}
+else
+    console.log("")
+    
+// same orchestra with switch case and break
+var musicians = 4;
+switch (musicians){
+  case 1:
+    console.log("solo");
+    break;
+  case 2:
+    console.log("duet");
+    break;
+  case 3:
+    console.log("trio");
+    break;
+  case 4:
+    console.log("quartet");
+    break;
+  case 5:
+    console.log("not a group");
+    break;
+  case -1:
+    console.log("this is a large group");
+
+    
+    
+    
+// Game of Cluedo using if else 
+
+var room = "dining room";
+var suspect = "Mr. Parkes"; 
+var weapon = "";
+var solved = false;
+//weapons are loated in rooms
+if (room==="ballroom")
+    weapon="poison";
+else if (room==="gallery") 
+    weapon="trophy";
+else if (room==="billiards room") 
+    weapon="pool stick";    
+else if (room==="dining room")
+    weapon="knife";
+// suspects if they belong to the room of their choice will be the killer
+if (suspect =="Mr. Parkes" && room=="dining room" || suspect=="Ms. Van Cleve" && room=="gallery" || suspect=="Mrs. Sparr" && room=="billiards room" || suspect=="Mr. Kalehoff" && room =="ballroom")
+    solved=true;
+else 
+    solve=false;
+if (solved) {
+	console.log(suspect +" did it in the " + room + " with the "+ weapon+"!");}
+  
+  
+ // Bank ATM messages
+ 
+ var balance = -20;
+var checkBalance = false;
+var isActive = false;
+if (checkBalance===true && (isActive===true ) && (balance>0)) {
+    console.log ("Your balance is $"+ balance)}
+else if (checkBalance===true && (isActive===true ) && (balance===0)) {
+    console.log ("Your account is empty")}
+else if (checkBalance===true && (isActive===true ) && (balance<0)) {
+    console.log ("Your Balance is negative. Please contact the bank")} 
+else if (checkBalance===true && (isActive===false )) {
+    console.log ("Your account is no longer active")}
+else if (checkBalance===false){
+    console.log("Thank you. Have a nice day!")}
+    
+    
+// complicated if statement with logical && and ||
+ /*   - flavor is "vanilla" or "chocolate";  vessel is "cone" or "bowl"; toppings is "sprinkles" or "peanuts"
+// change the values of `flavor`, `vessel`, and `toppings` to test your code*/
+var flavor = "chocolate";
+var vessel = "bowl";
+var toppings = "sprinkles";
+if (((flavor=="vanilla" || flavor =="chocolate") && 
+   (vessel=="bowl" || vessel =="cone")) && 
+   ((toppings=="peanuts" || toppings =="sprinkles"))) {               
+console.log("Id like two scoops of "+ flavor+ " ice cream in a "+ vessel+" with "+ toppings);
+}
+
+// using ternary if statement if (condn)? true : false
+
+var eatsPlants = false;
+var eatsAnimals = false;
+var category = (eatsPlants && eatsAnimals) ? "omnivore" : (eatsAnimals ? "carnivore" : eatsPlants ? "herbivore" : "undefined") ;
+console.log(category)
+
+// using case swoch to estimate annual salary by education
+var education = 'no high school diploma';
+var salary = 0;
+switch (education) {
+    case "no high school diploma":
+        salary="$25,636";
+        break;
+    case "a high school diploma":
+        salary="$35,256";
+        break;
+    case "an Associate's degree":
+        salary= "$41,496";
+        break;
+    case "a Bachelor's degree":
+        salary= "$59,124";
+        break;
+    case "a Master's degree":
+        salary= "$69,732";
+        break;
+    case "a Professional degree":
+        salary= "$89,960";
+        break;
+    case "a Doctoral degree":
+        salary= "$84,396";
+        break;
+}
+console.log("In 2015, a person with "+ education+ " earned an average of "+salary +"/year.");
+
+// while loop print three, five or three and five for divisibility
+var x = 1;
+var text=""
+while (x<=20) {
+    if (x%3===0 && x%5===0) {
+        text="three and five";}
+    else if (x%3===0){
+        text = "three";}
+    else if (x%5 ===0){
+        text ="five"}
+    else 
+        text =x
+    console.log(text);
+    x+=1;
+}
+
+// while loop - demonstrate with 99 bottles song
+var bottles = 99;
+console.log(bottles);
+while (bottles >2 ) {
+    console.log( bottles +" bottles of juice on the wall! " + bottles + " bottles of juice! Take one down, pass it around..."+ (bottles-1) + " bottles of juice on the wall!");
+    // don't forget to check pluralization on the last line!
+    bottles=bottles-1;
+}
+console.log("2 bottles of juice on the wall! 2 bottles of juice! Take one down, pass it around...1 bottle of juice on the wall!")
+console.log("1 bottle of juice on the wall! 1 bottle of juice! Take one down, pass it around...0 bottles of juice on the wall!")
+
+// Nasa count down sequence using While loop
+
+time = 60
+while (time >= 0){
+    switch(time){
+        case 50:
+            console.log("Orbiter transfers from ground to internal power");
+            break;
+        case 31:
+            console.log("Ground launch sequencer is go for auto sequence start");
+            break;
+        case 16: 
+            console.log("Activate launch pad sound suppression system");
+            break;
+        case 10:     
+            console.log("Activate main engine hydrogen burnoff system");
+            break;
+        case 6:
+            console.log("Main engine start");
+            break;
+        case 0:
+            console.log("Solid rocket booster ignition and liftoff!");
+            break;
+        default:
+            console.log("T-"+time+" seconds")
+        }
+        time=time-1;
+}
+// for loop
+
+for (var x = 9; x>=1; x = x - 1){
+    console.log ("hello " + x);
+}
+
+// correct the code below (did not have var x=5 i.e no starting point for the for loop
+
+for (var x=5; x < 10; x++) {
+    console.log(x);
+}
+
+// compute 12 factorial
+
+var solution=1
+for (var x=12; x>1; x--){
+    solution=solution*x
+}
+console.log(solution)
+
+// nested for loop for seating in a theater - 25 rows and 100 colums - print all seats
+for (row=0; row<26; row++) {
+    for (col=0; col<100; col++)
+    console.log(row +"-" + col)
+}
+
+
+
+
+
+  
