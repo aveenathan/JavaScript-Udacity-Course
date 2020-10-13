@@ -14,4 +14,76 @@ function laugh(num) {
 }
 console.log(laugh(7));
 
-// 
+// creates a line of * for a given length
+function makeLine(length) {
+    var line = "";
+    for (var j = 1; j <= length; j++) {
+        line += "* ";
+    }
+    return line + "\n";
+}
+// creates a triangle using the makeLine function
+function buildTriangle(height) {
+    var triangle="";
+    for (var num=1; num<=height; num++){
+        triangle=triangle + makeLine(num);
+    }
+    return triangle
+}
+
+console.log(buildTriangle(10));
+/* Out put is 
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * * * 
+* * * * * * * 
+* * * * * * * * 
+* * * * * * * * * 
+* * * * * * * * * *  */
+
+
+// Using Function Expressions to generate laughter
+
+var sound="";
+var laugh = function (num) {
+    for (i=1; i<=num; i++){
+        sound=sound+"ha";
+    }
+        sound=sound+"!"
+        return sound;
+       
+}
+console.log(laugh(3));
+
+// named function but accessed through variable name
+
+var cry= function bawling() {
+    var text="boohoo!";
+    return(text);
+};
+
+console.log(cry());
+
+// calling a function inline 
+
+// don't change this code
+// emotions() function definition
+function emotions(myString, myFunc) {
+    console.log("I am " + myString + ", " + myFunc(2));
+}
+// your code goes here
+// Call the emotions() function with two arguments
+// Argument 1 - "happy" string
+// Argument 2 - an inline function expression
+emotions("happy", something = function (num) {
+    sound="";
+    for (i=1; i<=num; i++){
+        sound=sound+"ha";
+    }
+        sound=sound+"!";
+        return sound;
+})
+
