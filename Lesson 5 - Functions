@@ -66,9 +66,8 @@ var cry= function bawling() {
 };
 
 console.log(cry());
-
-// calling a function inline 
-
+----------------------------------------
+//inline call of the function 
 // don't change this code
 // emotions() function definition
 function emotions(myString, myFunc) {
@@ -78,12 +77,13 @@ function emotions(myString, myFunc) {
 // Call the emotions() function with two arguments
 // Argument 1 - "happy" string
 // Argument 2 - an inline function expression
-emotions("happy", something = function (num) {
-    sound="";
+emotions("happy", function (num) {
+    var sound="";
     for (i=1; i<=num; i++){
         sound=sound+"ha";
     }
         sound=sound+"!";
         return sound;
-})
+});
 
+----------------------------------------------
