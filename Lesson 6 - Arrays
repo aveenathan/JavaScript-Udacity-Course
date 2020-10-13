@@ -1,1 +1,40 @@
 
+//Arrays Splicing -var rainbow = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple"];
+
+var rainbow = ['Red', 'Orange', 'Blackberry', 'Blue'];
+rainbow.splice(2,1,"Yellow","Green");
+rainbow.splice(6,0,"Purple");
+console.log(rainbow);
+
+// use array.length property to see if the team is full (7 people or more) 
+
+function hasEnoughPlayers(count){
+    if (count.length < 7){
+        return false;
+    }
+    else if (count.length >=7){
+        return true;
+    }
+}
+
+var team = ["Angelina Johnson", "Katie Bell", "Alicia Spinnet", "George Weasley", "Fred Weasley", "Harry Potter"];
+console.log(hasEnoughPlayers(team));
+
+// Arra methods- Push()
+var captain = "Mal";
+var second = "Zoe";
+var pilot = "Wash";
+var companion = "Inara";
+var mercenary = "Jayne";
+var mechanic = "Kaylee";
+
+var crew = [captain, second, pilot, companion, mercenary, mechanic];
+var doctor = "Simon";
+crew.push(doctor);
+var sister = "River";
+crew.push(sister)
+var shepherd = "Book";
+crew.push(shepherd)
+console.log(crew)
+// your code goes here
+
