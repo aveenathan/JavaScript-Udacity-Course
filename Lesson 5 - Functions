@@ -1,0 +1,17 @@
+// basic function and calling a function - no arguments for calling, no parameters for function. 
+function laugh() {
+  return ("hahahahahahahahahaha!");
+}
+console.log(laugh());
+
+// same calling funciton, now takes an argument 7 and function has a parameter (num) 
+
+function laugh(num) {
+  var hahas="";
+  for ( num; num>0; num--) {
+    hahas=hahas+"ha";}
+    return (hahas+"!");
+}
+console.log(laugh(7));
+
+// 
